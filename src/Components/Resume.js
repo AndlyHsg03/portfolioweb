@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Slide from "react-awesome-reveal";
 
+/* eslint-disable no-unused-vars */
 class Resume extends Component {
     getRandomColor() {
         let letters = "0123456789ABCDEF";
