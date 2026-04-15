@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Fade } from 'react-awesome-reveal';
-
+import profilePic from '../images/profilepic.jpg'; // sesuaikan path-nya
 
 class About extends Component {
     render() {
         if (!this.props.data) return null;
 
         const name = this.props.data.name;
-        const profilepic = "/images/" + this.props.data.image;
+       
         const bio = this.props.data.bio;
         const street = this.props.data.address.street;
         const city = this.props.data.address.city;
@@ -24,7 +24,7 @@ class About extends Component {
                         <div className="three columns">
                             <img
                                 className="profile-pic"
-                                src={profilepic}
+                                src={profilePic}
                                 alt="Nordic Giant rPofile Pic"
                             />
                         </div>

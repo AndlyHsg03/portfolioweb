@@ -8,7 +8,13 @@ class Porto extends Component {
         if(!this.props.data) return null;
         
         const projects = this.props.data.projects.map(function(projects) {
-            let projectImage = "images/portofolio/" + projects.image;
+            // ✅ Pakai require() untuk load dari src/images/
+            let projectImage;
+            try {
+                projectImage = require(`../images/portofolio/${projects.image}`);
+            } catch (e) {
+                projectImage = null; // kalau gambar tidak ditemukan
+            }
 
             return (
                 <div key={id++} className="columns portofolio-item">
@@ -35,8 +41,6 @@ class Porto extends Component {
             </section>
         );
     }
-
-
 }
 
 export default Porto;
