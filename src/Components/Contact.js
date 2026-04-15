@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Fade } from 'react-awesome-reveal';
-
+import ProfileAI from '../images/ProfileAI.jpg';
 class Contact extends Component {
     constructor(props) {
         super(props);
@@ -23,9 +23,7 @@ class Contact extends Component {
         }
     };
 
-    componentDidUpdate() {
-        this.scrollToBottom();
-    }
+    
 
     handleInputChange = (e) => {
         this.setState({ inputValue: e.target.value });
@@ -193,13 +191,7 @@ class Contact extends Component {
                 display: flex; align-items: center; justify-content: space-between;
             }
             .topbar-left { display: flex; align-items: center; gap: 12px; }
-            .bot-avatar {
-                width: 38px; height: 38px; border-radius: 11px;
-                background: linear-gradient(135deg, #6d28d9, #4338ca);
-                display: flex; align-items: center; justify-content: center;
-                font-size: 18px; box-shadow: 0 4px 14px rgba(109,40,217,0.5);
-                flex-shrink: 0;
-            }
+            
             .bot-name { font-size: 0.87rem; font-weight: 600; color: #e2e8f0; display: block; }
             .bot-status {
                 font-size: 0.7rem; color: #10b981; display: flex;
@@ -232,10 +224,14 @@ class Contact extends Component {
             .msg-row.mine { flex-direction: row-reverse; }
 
             .av {
-                width: 32px; height: 32px; border-radius: 10px;
-                display: flex; align-items: center; justify-content: center;
-                font-size: 15px; flex-shrink: 0;
-            }
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; /* 🔥 penting */
+    overflow: hidden;   /* 🔥 ini kunci */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
             .bot-av { background: linear-gradient(135deg,#6d28d9,#4338ca); box-shadow:0 2px 10px rgba(109,40,217,0.4); }
             .user-av { background: linear-gradient(135deg,#0e7490,#0369a1); box-shadow:0 2px 10px rgba(14,116,144,0.4); }
 
@@ -290,9 +286,9 @@ class Contact extends Component {
             }
             .msg-input:focus {
                 border-color: rgba(109,40,217,0.42);
-                background: rgba(255,255,255,0.06);
+                background: rgba(91, 65, 65, 0.06);
             }
-            .msg-input::placeholder { color: #1e293b; }
+            .msg-input::placeholder { color: #babcbe; }
             .msg-input:disabled { opacity: 0.5; }
 
             .send-btn {
@@ -348,19 +344,17 @@ class Contact extends Component {
                     <div className="contact-wrap">
 
                         <div className="contact-header">
-                            <div className="ai-badge">
-                                <div className="ai-badge-icon">✨</div>
-                                <span className="ai-badge-text">Gemini AI</span>
-                                <div className="online-dot" />
-                            </div>
-                            <h2 className="contact-title">Chat dengan AI Adly</h2>
+                            
+                            <h2 className="contact-title">Chat dengan AI Asisten Adly</h2>
                             <p className="contact-sub">Tanya apapun tentang Adly — skill, kuliah, project, atau kontak!</p>
                         </div>
 
                         <div className="chat-card">
                             <div className="chat-topbar">
                                 <div className="topbar-left">
-                                    <div className="bot-avatar">🤖</div>
+                                    <div >
+                                        <img src={ProfileAI} style={{ width: '40px', height: '40px', borderRadius:'10px' }} />
+                                    </div>
                                     <div>
                                         <span className="bot-name">Adly AI Assistant</span>
                                         <div className="bot-status">
@@ -379,7 +373,7 @@ class Contact extends Component {
                                 {messages.map((msg, idx) => (
                                     <div key={idx} className={`msg-row ${msg.role === 'user' ? 'mine' : ''}`}>
                                         <div className={`av ${msg.role === 'user' ? 'user-av' : 'bot-av'}`}>
-                                            {msg.role === 'user' ? '👤' : '🤖'}
+                                            {msg.role === 'user' ? '👤' : {ProfileAI} && <img src={ProfileAI} alt="Adly" style={{ width: '100%', height: '100%', borderRadius: 'inherit' }} />}
                                         </div>
                                         <div className={`bubble ${msg.role === 'user' ? 'user-bub' : 'bot-bub'}`}>
                                             {msg.text}
@@ -388,7 +382,9 @@ class Contact extends Component {
                                 ))}
                                 {isLoading && (
                                     <div className="msg-row">
-                                        <div className="av bot-av">🤖</div>
+                                        <div className="av bot-av">
+                                            {ProfileAI && <img src={ProfileAI} alt="Adly" style={{ width: '100%', height: '100%', borderRadius: 'inherit' }} />}
+                                        </div>
                                         <div className="bubble bot-bub">
                                             <div className="typing"><span /><span /><span /></div>
                                         </div>
