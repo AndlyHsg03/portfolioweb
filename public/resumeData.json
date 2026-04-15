@@ -1,0 +1,134 @@
+{
+    "main":{
+        "name" : "Andly Hasugian",
+        "description" : "I am a Web development engineer and I use react to develop pages.",
+        "image" : "profilepic.jpg",
+        "github" : "https://github.com/AndlyHsg03",
+        "project" : "https://github.com/AndlyHsg03",
+        "bio" : "Halo! Saya Andly Sofian Hasugian, mahasiswa Ilmu Komputer semester 3 di Universitas Negeri Medan. Saat ini saya sedang mendalami pengembangan web (HTML, CSS, JavaScript, React, Node.js) dan terus belajar untuk mengembangkan keterampilan saya di bidang teknologi.",
+        "contactmessage" : "Hello, here I am",
+        "email" : "dlyhasugian@gmail.com",
+        "phone" : "853-7431-4108",
+        "address" : {
+            "street" : "UNIMED",
+            "city" : "Medan",
+            "state" : "Sumatera Utara",
+            "zip" : "16204"
+        },
+        "website" : "https://github.com/AndlyHsg03",
+        "resumeDownload" : "https://github.com/AndlyHsg03",
+        "social" : [
+            {
+                "name" : "facebook",
+                "url" : "https://web.facebook.com/adly.hasugian.31/",
+                "className" : "fa fa-facebook"
+            },
+            {
+                "nama" : "instagram",
+                "url" : "https://www.instagram.com/andly_404/",
+                "className" : "fa fa-instagram"
+            },
+            {
+                "nama" : "LinkedIn",
+                "url" : "www.linkedin.com/in/andly-sofian-hasugian-3ab749294",
+                "className" : "fa fa-linkedin"
+            },
+            {
+                "nama" : "Github",
+                "url" : "https://github.com/AndlyHsg03",
+                "className" : "fa fa-github"
+            }
+        ]
+    },
+    "resume" : {
+        "education" : [
+            {
+                "school" : "Universitas Negeri Medan",
+                "degree" : "Bachelor degree of Computer Science",
+                "firstSchool" : "Agustus 2024",
+                "description" : "I am student of Computer Science in UNIMED"
+            },
+            {
+                "school" : "SMA 1 Parlilitan",
+                "degree" : "Science",
+                "graduated" : "May 2024",
+                "description" : "Im joining Fisika Olympiad"
+            }
+        ],
+        "work" : [
+            {
+                "company" : "student of Medan State University",
+                "title" : "Software Engineer",
+                "years" : "2024-Agustus - Now"
+            }, {
+                "company" : "",
+                "title" : "Frontend Engineer",
+                "years" : "2024-Agustus - Now",
+                "description" : "Creating Website Portofolio"
+            }
+        ],
+        "skills" : [
+            {
+                "name" : "Javascript",
+                "level" : "77%"
+            },
+            {
+                "name" : "Python",
+                "level" : "55%"
+            },
+            {
+                "name" : "ReactJS",
+                "level" : "75%"
+            },
+            {
+                "name" : "NodeJs",
+                "level" : "10%"
+            },
+            {
+                "name" : "HTML/CSS",
+                "level" : "80%"
+            }
+        ]
+    },
+    "portofolio" : {
+        "projects" : [
+            {
+                "title" : "Web Pertama Saya dengan React",
+                "category" : "My travel blog my post-university",
+                "image" : "01.jpg",
+                "url" : "https://www.canadianwanderlust.com"
+            },
+            {
+                "title" : "Tamat Muncak di gunung sibayak (ROBLOX)",
+                "category" : "(offline now) A fighting gear company i started",
+                "image" : "02.png",
+                "url" : "http://www.timbakerdev.com"
+            },
+            {
+                "title" : "expert in using fanny in mobile legend game",
+                "category" : "Website I build for a restaurant I like in Thailand",
+                "image" : "03.jpg",
+                "url" : "http://www.timbakerdev.com"
+            },
+            {
+                "title":"Karya ilmiah pertama saya",
+                "category":"A React based resume website template",
+                "image":"04.jpg",
+                "url":"http://www.timbakerdev.com"
+            },
+            {
+                "title":"If you know, you know",
+                "category":"(MVP Only) A React and Meteor based chat University project.",
+                "image":"05.jpg",
+                "url":"http://www.smirkspace.com"
+            },
+            {
+                "title":"Tamat Game Spiderman-2 Steam Pc Mode Amazing",
+                "category":"My Travel Blog for my post-university travels",
+                "image":"06.png",
+                "url":"https://www.canadianwanderlust.com"
+            }
+        ]
+    }
+}
+        
