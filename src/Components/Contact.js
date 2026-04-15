@@ -372,13 +372,21 @@ class Contact extends Component {
                             <div className="msgs">
                                 {messages.map((msg, idx) => (
                                     <div key={idx} className={`msg-row ${msg.role === 'user' ? 'mine' : ''}`}>
-                                        <div className={`av ${msg.role === 'user' ? 'user-av' : 'bot-av'}`}>
-                                            {msg.role === 'user' ? '👤' : {ProfileAI} && <img src={ProfileAI} alt="Adly" style={{ width: '100%', height: '100%', borderRadius: 'inherit' }} />}
-                                        </div>
-                                        <div className={`bubble ${msg.role === 'user' ? 'user-bub' : 'bot-bub'}`}>
-                                            {msg.text}
-                                        </div>
-                                    </div>
+  <div className={`av ${msg.role === 'user' ? 'user-av' : 'bot-av'}`}>
+    {msg.role === 'user' 
+      ? '👤' 
+      : <img 
+          src={ProfileAI} 
+          alt="Adly" 
+          style={{ width: '100%', height: '100%', borderRadius: 'inherit' }} 
+        />
+    }
+  </div>
+
+  <div className={`bubble ${msg.role === 'user' ? 'user-bub' : 'bot-bub'}`}>
+    {msg.text}
+  </div>
+</div>
                                 ))}
                                 {isLoading && (
                                     <div className="msg-row">
