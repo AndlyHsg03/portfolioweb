@@ -353,7 +353,11 @@ class Contact extends Component {
                             <div className="chat-topbar">
                                 <div className="topbar-left">
                                     <div >
-                                        <img src={ProfileAI} style={{ width: '40px', height: '40px', borderRadius:'10px' }} />
+                                        <img 
+  src={ProfileAI} 
+  alt="Profile Adly" 
+  style={{ width: '40px', height: '40px' }} 
+/>
                                     </div>
                                     <div>
                                         <span className="bot-name">Adly AI Assistant</span>
